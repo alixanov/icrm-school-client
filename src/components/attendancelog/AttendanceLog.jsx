@@ -19,7 +19,7 @@ const AttendanceLog = () => {
           setLoading(true);  // Устанавливаем состояние загрузки
           const formattedDate = selectedDate.toISOString().split('T')[0];  // Форматируем дату в строку "YYYY-MM-DD"
 
-          axios.get(`http://localhost:3005/api/attendance?groupId=${groupId}&date=${formattedDate}`)
+          axios.get(`https://crm-school-server.vercel.app/api/attendance?groupId=${groupId}&date=${formattedDate}`)
                .then(response => {
                     setAttendanceRecords(response.data);  // Сохраняем данные о посещаемости в state
                })

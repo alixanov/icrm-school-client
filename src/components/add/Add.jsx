@@ -17,7 +17,7 @@ const Add = ({ onClose}) => {
      });
 
     const addData = (data) => {
-        axios.post('http://localhost:3005/api/add', data)
+         axios.post('https://crm-school-server.vercel.app/api/add', data)
             .then(response => {
                  onClose();
                  // Обновление текущей страницы

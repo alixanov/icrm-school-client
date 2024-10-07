@@ -16,7 +16,7 @@ const StudentsTable = () => {
 
      // Получение списка студентов для группы
      useEffect(() => {
-          axios.get(`http://localhost:3005/api/students/${groupId}`)
+          axios.get(`https://crm-school-server.vercel.app/api/students/${groupId}`)
                .then(response => {
                     setStudents(response.data);
                })
@@ -35,7 +35,7 @@ const StudentsTable = () => {
                groupId: groupId
           };
 
-          axios.post('http://localhost:3005/api/students', studentData)
+          axios.post('https://crm-school-server.vercel.app/api/students', studentData)
                .then(response => {
                     setStudents([...students, response.data]);
                     setNewStudent({ name: '', dateOfBirth: null, phonenumber: '' });
@@ -63,7 +63,7 @@ const StudentsTable = () => {
                groupId: groupId
           };
 
-          axios.put(`http://localhost:3005/api/students/${editStudent._id}`, updatedStudent)
+          axios.put(`https://crm-school-server.vercel.app/students/${editStudent._id}`, updatedStudent)
                .then(response => {
                     setStudents(students.map(student =>
                          student._id === editStudent._id ? response.data : student
@@ -78,7 +78,7 @@ const StudentsTable = () => {
 
      // Функция удаления студента
      const handleDeleteStudent = (id) => {
-          axios.delete(`http://localhost:3005/api/students/${id}`)
+          axios.delete(`https://crm-school-server.vercel.app/api/students/${id}`)
                .then(() => {
                     setStudents(students.filter(student => student._id !== id));
                })

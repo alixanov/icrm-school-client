@@ -18,7 +18,7 @@ const AttendanceTable = () => {
   
   // Получение списка студентов для группы
   useEffect(() => {
-    axios.get(`http://localhost:3005/api/students/${groupId}`)
+    axios.get(`https://crm-school-server.vercel.app/api/students/${groupId}`)
       .then(response => {
         setStudents(response.data);
         const initialAttendance = response.data.map(student => ({
@@ -43,7 +43,7 @@ const AttendanceTable = () => {
 
   // Отправка данных посещаемости на сервер
   const handleSubmitAttendance = () => {
-    axios.post('http://localhost:3005/api/attendance', {
+    axios.post('https://crm-school-server.vercel.app/api/attendance', {
       groupId,
       date: selectedDate,  // Передаем выбранную дату
       records: attendance,
