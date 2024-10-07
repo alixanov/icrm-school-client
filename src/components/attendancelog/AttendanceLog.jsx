@@ -70,7 +70,7 @@ const AttendanceLog = () => {
                                              <tr key={record._id}>
                                                   <td>{record.studentId?.name || 'Имя не найдено'}</td>  {/* Отображаем имя студента */}
                                                   <td>{record.groupId?.nomi || 'Группа не найдена'}</td>  {/* Отображаем название группы */}
-                                                  <td>{record.status === 'present' ? 'Присутствует' : record.status === 'absent' ? 'Отсутствует' : 'Опоздал'}</td>
+                                                  <td>{record.status === 'present' ? 'Келмади' : record.status === 'absent' ? 'Келди' : 'Кеч колди'}</td>
                                              </tr>
                                         ))
                                    ) : (
