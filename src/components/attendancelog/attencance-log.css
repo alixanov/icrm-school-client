@@ -1,0 +1,17 @@
+.attendance-log-container {
+     margin: 20px;
+}
+.btn__search {
+     width: 170px;
+     height: 35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: green;
+     color: white;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     margin-top: 10px;
+     font-size: 19px;
+}

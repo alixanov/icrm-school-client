@@ -1,0 +1,220 @@
+.card {
+     width: 100%;
+     min-height: 87.7vh;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     flex-wrap: wrap;
+     padding: 2%;
+     gap: 13px;
+}
+
+.box {
+     width: 250px;
+     height: 280px;
+     background-color: white;
+     display: flex;
+     align-items: end;
+     justify-content: space-between;
+     text-align: end;
+     flex-direction: column;
+     border-radius: 8px;
+     padding: 1%;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+
+}
+
+.box:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box>img {
+     width: 100%;
+     height: 200px;
+}
+.box>p:nth-child(1) {
+     color: #1c232795;
+     font-weight: 700;
+     font-size: 27px;
+}
+
+.box>p {
+     color: #242627;
+     font-weight: 700;
+     font-size: 17px;
+}
+
+.box>span {
+color: #1c232795;
+     font-weight: 700;
+     font-size: 23px;
+}
+
+.box>h4 {
+     color: #24262779;
+     font-weight: 400;
+     font-size: 20px;
+}
+
+.box>a {
+     width: 161px;
+     height: 39px;
+     background-color: #C9B5A2;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     font-size: 22px;
+     border-radius: 8px;
+}
+
+.delete__create>button {
+     width: 110px;
+     height: 35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 14px;
+     font-weight: 600;
+     background-color: #f0edeb;
+     border: none;
+     cursor: pointer;
+     border-radius: 3px;
+}
+
+.delete__create>button:hover {
+     background-color: #2426273f;
+     transform: scale(.99);
+}
+.box > button{
+width: 130px;
+height: 35px;
+background-color: #242627;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+border: none;
+font-size: 15px;
+font-weight: 200;
+}
+
+.box>button:hover {
+background-color: #1c1d1e;
+     transform: scale(0.98);
+}
+
+.box>button:active {
+background-color: rgb(14, 15, 15);
+     transform: scale(.99);
+}
+
+/* modal */
+.modal {
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+     background-color: #fff;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%;
+     max-width: 500px;
+     margin: auto;
+     border-radius: 8px;
+}
+
+.close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+.modal__form {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 22px;
+
+}
+
+.modal__form>input,
+select,
+option {
+     width: 300px;
+     height: 45px;
+     text-indent: 8px;
+     border-radius: 8px;
+     outline: none;
+     border: none;
+     font-size: 19px;
+     color: white;
+}
+
+.modal__form>input::placeholder {
+     color: white;
+}
+
+.modal__form>button {
+     width: 200px;
+     height: 45px;
+     background-color: green;
+     font-size: 22px;
+     color: white;
+     border-radius: 8px;
+     cursor: pointer;
+     border: none;
+     transform: scale(.98);
+     transition: background-color ease-in .2s, transform ease-in .2s;
+}
+
+.modal__form>button:hover {
+     background-color: rgb(5, 110, 5);
+     transform: scale(0.98);
+}
+
+.modal__form>button:active {
+     background-color: rgb(5, 110, 5);
+     transform: scale(.99);
+}
+.delete__btn {
+     width: 150px;
+     height: 35px;
+     background-color: crimson;
+     color: white;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+}
+.create__btn {
+     width: 150px;
+     height: 35px;
+     background-color: rgb(88, 88, 255);
+     color: white;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+}
